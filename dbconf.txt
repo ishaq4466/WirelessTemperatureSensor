@@ -1,0 +1,40 @@
+*For Installing the LAMP run the followimg script
+it will also create a data base 'tempdb', for protecting your
+sqlserver run the last command and set the password for root user
+{
+
+yum install apache2 mysql-server php-mysql php -y
+
+service httpd start
+service mysqld start
+
+mysqladmin -uroot create tempdb
+
+--> mysql_secure_installation;
+}
+
+
+Creating a table 'templog' in the 'tempdb' database
+{
+	mysql -uroot -p(enter the password)
+	>create table templog(id int primary key not null auto_increment,date char(20),temperature float(4,2);
+    >show table templog
+}
+
+Optional MySql command(just for information sake)
+{
+	>show tables/databases;
+	>select * from table_name;
+	>create database/table db_name;
+	>drop command 
+	>delete command
+	>insert command
+	 
+	for installing on ec2 server
+	yum install gcc -y
+	yum install mysql-devel
+	pip install MySQL-python
+
+
+
+}
